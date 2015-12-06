@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C170375F-7641-4722-9360-59C4073CDB8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TasksAndJobLists</RootNamespace>
+    <AssemblyName>TasksAndJobLists</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>TasksAndJobs</ProductName>
+    <PublisherName>J.Barwick</PublisherName>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CCAC93784CFB4557A88AC7E92FB7FD1E99C940B0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TasksAndJobLists_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TasksAndJobs.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended, Version=6.0.0.0, Culture=neutral, PublicKeyToken=05b7e29bdd433584, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\packages\AvalonDock.2.0.2000\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\packages\AvalonDock.2.0.2000\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Expression">
+      <HintPath>..\packages\AvalonDock.2.0.2000\lib\net40\Xceed.Wpf.AvalonDock.Themes.Expression.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\packages\AvalonDock.2.0.2000\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\packages\AvalonDock.2.0.2000\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Helpers\HelperMethods.cs" />
+    <Compile Include="Helpers\VeryObservableCollection.cs" />
+    <Compile Include="Helpers\WidthToParentConverter.cs" />
+    <Compile Include="Migrations\201511271045375_dbupdate.cs" />
+    <Compile Include="Migrations\201511271045375_dbupdate.Designer.cs">
+      <DependentUpon>201511271045375_dbupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511271057307_dbupdateagain.cs" />
+    <Compile Include="Migrations\201511271057307_dbupdateagain.Designer.cs">
+      <DependentUpon>201511271057307_dbupdateagain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511271921480_dbrefactored.cs" />
+    <Compile Include="Migrations\201511271921480_dbrefactored.Designer.cs">
+      <DependentUpon>201511271921480_dbrefactored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511281644107_TaskEntityAdded.cs" />
+    <Compile Include="Migrations\201511281644107_TaskEntityAdded.Designer.cs">
+      <DependentUpon>201511281644107_TaskEntityAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511281649353_TaskEntityModded.cs" />
+    <Compile Include="Migrations\201511281649353_TaskEntityModded.Designer.cs">
+      <DependentUpon>201511281649353_TaskEntityModded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511281835123_Extended.cs" />
+    <Compile Include="Migrations\201511281835123_Extended.Designer.cs">
+      <DependentUpon>201511281835123_Extended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511291047146_Extended1.cs" />
+    <Compile Include="Migrations\201511291047146_Extended1.Designer.cs">
+      <DependentUpon>201511291047146_Extended1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512062006321_LastEditedDate_Added.cs" />
+    <Compile Include="Migrations\201512062006321_LastEditedDate_Added.Designer.cs">
+      <DependentUpon>201512062006321_LastEditedDate_Added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DbCheck.cs" />
+    <Compile Include="Models\JobEntity.cs" />
+    <Compile Include="Models\TaskItem.cs" />
+    <Compile Include="Models\TaskEntity.cs" />
+    <Compile Include="Models\JobItem.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ViewModel.cs" />
+    <Compile Include="Models\ViewModelBase.cs" />
+    <Compile Include="TaksAndJobsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaksAndJobsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TasksAndJobsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TasksAndJobsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BusyIndicator.xaml.cs">
+      <DependentUpon>BusyIndicator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JobDetailsControl.xaml.cs">
+      <DependentUpon>JobDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoneJobControl.xaml.cs">
+      <DependentUpon>DoneJobControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\JobControl.xaml.cs">
+      <DependentUpon>JobControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StartupScreen.xaml.cs">
+      <DependentUpon>StartupScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TaskControl.xaml.cs">
+      <DependentUpon>TaskControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserManagerControl.xaml.cs">
+      <DependentUpon>UserManagerControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TaskDetailsControl.xaml.cs">
+      <DependentUpon>TaskDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\EditableTextBlock.cs" />
+    <Compile Include="Helpers\EditableTextBlockAdorner.cs" />
+    <Compile Include="Helpers\ListBoxHelper.cs" />
+    <Compile Include="Helpers\ListExtension.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\BusyIndicator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\JobDetailsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\DoneJobControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\JobControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StartupScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TaskControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\UserManagerControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TaskDetailsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201511270942509_InitialCreate.cs" />
+    <Compile Include="Migrations\201511270942509_InitialCreate.Designer.cs">
+      <DependentUpon>201511270942509_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511270946140_JobModelUpdated.cs" />
+    <Compile Include="Migrations\201511270946140_JobModelUpdated.Designer.cs">
+      <DependentUpon>201511270946140_JobModelUpdated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511271013027_JobModelUpdatedTasks.cs" />
+    <Compile Include="Migrations\201511271013027_JobModelUpdatedTasks.Designer.cs">
+      <DependentUpon>201511271013027_JobModelUpdatedTasks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511271327562_savedjobs_added.cs" />
+    <Compile Include="Migrations\201511271327562_savedjobs_added.Designer.cs">
+      <DependentUpon>201511271327562_savedjobs_added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Helpers\FlowDocumentToXamlConverter.cs" />
+    <Compile Include="Database\MyContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\201511270942509_InitialCreate.resx">
+      <DependentUpon>201511270942509_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511270946140_JobModelUpdated.resx">
+      <DependentUpon>201511270946140_JobModelUpdated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271013027_JobModelUpdatedTasks.resx">
+      <DependentUpon>201511271013027_JobModelUpdatedTasks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271045375_dbupdate.resx">
+      <DependentUpon>201511271045375_dbupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271057307_dbupdateagain.resx">
+      <DependentUpon>201511271057307_dbupdateagain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271327562_savedjobs_added.resx">
+      <DependentUpon>201511271327562_savedjobs_added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511271921480_dbrefactored.resx">
+      <DependentUpon>201511271921480_dbrefactored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511281644107_TaskEntityAdded.resx">
+      <DependentUpon>201511281644107_TaskEntityAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511281649353_TaskEntityModded.resx">
+      <DependentUpon>201511281649353_TaskEntityModded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511281835123_Extended.resx">
+      <DependentUpon>201511281835123_Extended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511291047146_Extended1.resx">
+      <DependentUpon>201511291047146_Extended1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512062006321_LastEditedDate_Added.resx">
+      <DependentUpon>201512062006321_LastEditedDate_Added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="TaksAndJobsDataSet.xsc">
+      <DependentUpon>TaksAndJobsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TaksAndJobsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaksAndJobsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TaksAndJobsDataSet.xss">
+      <DependentUpon>TaksAndJobsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TasksAndJobLists_TemporaryKey.pfx" />
+    <None Include="TasksAndJobsDataSet.xsc">
+      <DependentUpon>TasksAndJobsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TasksAndJobsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TasksAndJobsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TasksAndJobsDataSet.xss">
+      <DependentUpon>TasksAndJobsDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FsRichTextBox\FsRichTextBox.csproj">
+      <Project>{091ce5bc-d5c3-4752-a244-053664873941}</Project>
+      <Name>FsRichTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GongSolutions.Wpf.DragDrop\GongSolutions.Wpf.DragDrop %28NET4%29.csproj">
+      <Project>{0c6674cc-6d49-414a-9b41-d4e175028ffb}</Project>
+      <Name>GongSolutions.Wpf.DragDrop %28NET4%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1448690246_sort-numerically.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\1448636986_Save.png" />
+    <Resource Include="Images\1448636996_Synchronize.png" />
+    <Resource Include="Images\1448637004_Add.png" />
+    <Resource Include="Images\1448637241_f-cross_256.png" />
+    <Resource Include="Images\1448637275_f-check_256.png" />
+    <Resource Include="Images\list.png" />
+    <Resource Include="Images\plus.png" />
+    <Resource Include="Images\refresh.png" />
+    <Resource Include="Images\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Print-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TasksAndJobs.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
