@@ -20,24 +20,6 @@ namespace TasksAndJobLists.Models
             _currentTask = new TaskItem();
             _currentJobItem = new JobItem();
             PropertyChanged += ViewModel_PropertyChanged;
-            _jobItemCollection.CollectionChanged += _jobItemCollection_CollectionChanged;
-            _currentJobItem.PropertyChanged += _currentJobItem_PropertyChanged;
-            _currentTask.PropertyChanged += _currentTask_PropertyChanged;
-            
-        }
-
-        private void _currentTask_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            string bah = "";
-        }
-
-        private void _currentJobItem_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-        }
-
-        private void _jobItemCollection_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
-        {
-            isJobListDirty = true;
         }
 
         private void ViewModel_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
